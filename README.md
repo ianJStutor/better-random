@@ -1,1 +1,3 @@
-# better-random
+# Better Random
+
+## Ian Marshall
