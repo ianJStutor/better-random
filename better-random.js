@@ -14,6 +14,7 @@ function betterRandom(seed = Date.now()){
 		  c = 1013904223,
 		  m = Math.pow(2, 32);
 	var min, max;
+    if (isNaN(Number(seed))) seed = Date.now();
 
 	function nextSeed() {
 		seed = (seed * a + c) % m;
@@ -39,4 +40,4 @@ function betterRandom(seed = Date.now()){
 	return {nextInt, nextFloat, range};
 }
 
-export default betterRandom;
+export { betterRandom };

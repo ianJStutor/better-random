@@ -22,8 +22,31 @@
             <h3>When you need a fast, seeded pseudo random number generator, you'll have to write your own&hellip;or use mine!</h3>
         </header>
         <main>
-            <input placeholder="Type something..." />
-            <output></output>
+            <fieldset>
+                <input id="randseed" type="radio" name="seed" checked />
+                <label for="randseed">Random Seed</label>
+                <input id="userseed" type="radio" name="seed" />
+                <label for="userseed">Custom Seed</label>
+                <input type="number" value="1234" disabled />
+            </fieldset>
+            <fieldset>
+                <h4>Random Float</h4>
+                <p>Get next <input type="number" min="1" value="10" /> floating-point numbers</p>
+                <button>Go</button>
+                <output></output>
+            </fieldset>
+            <fieldset>
+                <h4>Random Integer within Range</h4>
+                <p>Get next <input type="number" min="1" value="5" /> integers inclusively between <input type="number" value="1" /> and <input type="number" value="6" /></p>
+                <button>Go</button>
+                <output></output>
+            </fieldset>
+            <fieldset>
+                <h4>Random Float within Range</h4>
+                <p>Get next <input type="number" min="1" value="10" /> floating-point numbers inclusively between <input type="number" value="0" /> and <input type="number" value="100" /></p>
+                <button>Go</button>
+                <output></output>
+            </fieldset>
         </main>
         <footer>
             <nav>

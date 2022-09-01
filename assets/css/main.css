@@ -10,6 +10,7 @@
     --canvas-color-light: var(--light);
     --highlight: rebeccapurple;
     --highlight-light: #c2add6;
+    --highlight-dark: #391d56;
 }
 
 html {
@@ -62,7 +63,12 @@ h3 {
     border-bottom: 1px solid var(--light);
 }
 
-p {
+h4 {
+    color: var(--light);
+    font-size: min(24px, 14vw);
+}
+
+p, label {
     text-align: center;
     color: var(--light);
 }
@@ -72,25 +78,66 @@ a {
 }
 
 input {
-    width: 90%;
-    max-width: 300px;
-    font-size: 2em;
+    width: 100px;
+    font-size: 1.25em;
     padding: 10px 15px;
     border-radius: 5px;
-    margin: 50px 0 20px;
+    margin: 5px 0 20px;
+}
+
+button, label {
+    font-size: 2em;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--highlight);
+    background-color: var(--highlight-dark);
+    color: var(--light);
+    cursor: pointer;
+    transition: 0.25s;
+    vertical-align: middle;
+}
+
+button:hover, label:hover {
+    background-color: var(--highlight);
+}
+
+input[type="radio"] {
+    width: 25px;
+    margin-left: 100px;
+}
+
+input[disabled] {
+    background-color: var(--grey);
 }
 
 output {
     background-color: var(--highlight-light);
     width: 90%;
     max-width: 500px;
-    height: 200px;
+    min-height: 200px;
     display: block;
     margin: 20px auto;
     padding: 10px;
     border-radius: 10px;
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
 *::selection {
     background-color: var(--highlight-light);
+}
+
+.gameDie {
+    display: inline-block;
+    background-color: ivory;
+    color: black;
+    font-size: 4em;
+    padding: 0 0.25em 0.1em;
+    margin: 5px;
+    border: 2px solid brown;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
 }
