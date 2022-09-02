@@ -10,11 +10,7 @@
 
 ### Description
 
-Dynamic Text can be "ragged" along one or both vertical edges or may have only one word on its last line. This tool can help.
-
-"Balance" here means that each line of text is as close as possible to a uniform width.
-
-Since balancing requires multiple lines of text, this tool does not work on a single line of text.
+JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. Wo, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
 
 Built with vanilla JavaScript, my favorite flavor!
 
