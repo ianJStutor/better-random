@@ -1,12 +1,7 @@
 /*
-	This is a linear congruential generator algorithm from the book
-	Numerical Recipes: The Art of Scientific Computing, 1986,
-	by 	William H. Press, Saul A. Teukolsky, William T. Vetterling,
-	and Brian P. Flannery.
+This is a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
 
-	It's NOT suitable for cryptography, but stable in production,
-	and is a lot faster than more modern algorithms (like Mersenne
-    Twister or ARC4, for example).
+It's NOT suitable for cryptography, but stable in production, and is a lot faster than more modern, more sophisticated algorithms (like Mersenne Twister or ARC4, for example).
 */
 
 function betterRandom(seed = Date.now()){

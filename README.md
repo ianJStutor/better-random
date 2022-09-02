@@ -10,7 +10,11 @@
 
 ### Description
 
-JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. Wo, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
+JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. So, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
+
+This is a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
+
+It's NOT suitable for cryptography, but stable in production, and is a lot faster than more modern, more sophisticated algorithms (like Mersenne Twister or ARC4, for example).
 
 Built with vanilla JavaScript, my favorite flavor!
 
@@ -52,7 +56,7 @@ export { betterRandom };
 betterRandom(seed)
 ```
 
-Calling <code>betterRandom</code> initializes a new pseudo random number generator. The <code>seed</code> is optional, and defaults to <code>Date.now()</code>. If provided, for best results it should be a positive integer inclusively between zero and <code>1.7976931348623157e+308</code>.
+Calling <code>betterRandom</code> initializes a new pseudo random number generator. The <code>seed</code> is optional, and defaults to <code>Date.now()</code>. If a seed is provided, for best results it should be a positive integer inclusively between zero and <code>1.7976931348623157e+308</code>.
 
 <code>betterRandom</code> returns an object containing the three functions below.
 
@@ -62,7 +66,7 @@ betterRandom().range(min, max)
 
 The <code>range</code> function defines low and high clamping boundaries for the random number. If only one argument is given, the second one will default to zero. <code>min</code> does not need to be less than <code>max</code>.
 
-After defining a range, <code>nextInt</code> and <code>nextFloat</code> will produce numbers within that range, never going below <code>min</code> and never going above <code>max</code>, although matching values are possible. Calling <code>range</code> without arguments will reset the range to defaults (between zero and one, inclusive).
+After defining a range, <code>nextInt</code> and <code>nextFloat</code> will produce numbers within that range, never going below <code>min</code> and never going above <code>max</code>, although matching values are possible when later calling <code>nextInt()</code>. Calling <code>range</code> without arguments will reset the range to defaults (between zero and one, inclusive).
 
 <code>range</code> returns an object containing the two functions below.
 
