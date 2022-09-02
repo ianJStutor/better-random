@@ -30,6 +30,10 @@ function betterRandom(seed = Date.now()){
 		return (seed/m) * (max-min)+min;
 	}
 	function range(mn, mx=0) {
+		if (mn === undefined) {
+			min = max = undefined;
+			return;
+		}
 		const n = Math.min(mn, mx),
 			  x = Math.max(mn, mx);
 		min = isNaN(n) ? undefined : n;

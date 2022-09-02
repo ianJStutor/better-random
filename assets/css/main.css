@@ -126,6 +126,11 @@ ul {
     list-style-type: none;
 }
 
+code {
+    font-size: 1.4em;
+    font-family: monospace;
+}
+
 *::selection {
     background-color: var(--highlight-light);
 }
