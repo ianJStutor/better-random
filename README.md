@@ -75,7 +75,7 @@ betterRandom().nextInt()
 betterRandom().range().nextInt()
 ```
 
-The <code>nextInt</code> function returns a random integer. Calling it without setting a range will randomly produce either zero or one. Calling <code>nextInt</code> after setting a range will produce a random number within that range, inclusive.
+The <code>nextInt</code> function returns a random integer. Calling it without setting a range will randomly produce an integer up to ten digits long. Calling <code>nextInt</code> after setting a range will produce a random integer clamped to that range, inclusive.
 
 Each call to <code>nextInt</code> changes the seed according to the algorithm. So calling it multiple times will produce a deterministic sequence of integers. Use the same seed, and you'll get the exact same sequence.
 
