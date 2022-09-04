@@ -52,6 +52,8 @@ export { betterRandom };
 
 #### Public Methods
 
+##### betterRandom
+
 ```js
 betterRandom(seed)
 ```
@@ -59,6 +61,10 @@ betterRandom(seed)
 Calling <code>betterRandom</code> initializes a new pseudo random number generator. The <code>seed</code> is optional, and defaults to <code>Date.now()</code>. If a seed is provided, for best results it should be a positive integer inclusively between zero and <code>1.7976931348623157e+308</code>.
 
 <code>betterRandom</code> returns an object containing the three functions below.
+
+<code>betterRandom</code> is not a constructor as in an object-oriented paradigm. Instead it is a function that keeps values in closure and returns an object literal with methods that can act within that closure.
+
+##### range
 
 ```js
 betterRandom().range(min, max)
@@ -70,6 +76,8 @@ After defining a range, <code>nextInt</code> and <code>nextFloat</code> will pro
 
 <code>range</code> returns an object containing the two functions below.
 
+##### nextInt
+
 ```js
 betterRandom().nextInt()
 betterRandom().range().nextInt()
@@ -78,6 +86,8 @@ betterRandom().range().nextInt()
 The <code>nextInt</code> function returns a random integer. Calling it without setting a range will randomly produce an integer up to ten digits long. Calling <code>nextInt</code> after setting a range will produce a random integer clamped to that range, inclusive.
 
 Each call to <code>nextInt</code> changes the seed according to the algorithm. So calling it multiple times will produce a deterministic sequence of integers. Use the same seed, and you'll get the exact same sequence.
+
+##### nextFloat
 
 ```js
 betterRandom().nextFloat()
