@@ -18,6 +18,26 @@ It's NOT suitable for cryptography, but stable in production, and is a lot faste
 
 Built with vanilla JavaScript, my favorite flavor!
 
+### Testing
+
+```bash
+npm test
+```
+
+Provided testing uses Jest on a Node environment. Please note that special configuration has been made for Node and for Jest to both use ECMAScript modules (<code>import</code> instead of the Common.js <code>require()</code>).
+
+The following was inserted into <code>package.json</code> for testing to work.
+
+```json
+"type": "module",
+"jest": {
+    "transform": {}
+},
+"scripts": {
+  "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+}
+```
+
 ### Usage
 
 Include <code>better-random.js</code> in your project. Import the JS into your main JavaScript file and call <code>betterRandom(seed)</code>, where <code>seed</code> is an optional seed number. The return value is an object with three possible functions: <code>range(min, max)</code>, <code>nextInt()</code>, and <code>nextFloat()</code>.
