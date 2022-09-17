@@ -1,14 +1,8 @@
 # Better Random
 
-## Ian Marshall
-
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-### Live Site
-
-> [https://ianjstutor.github.io/better-random/](https://ianjstutor.github.io/better-random/)
-
-### Description
+## Description
 
 JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. So, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
 
@@ -18,7 +12,15 @@ It's NOT suitable for cryptography, but stable in production, and is a lot faste
 
 Built with vanilla JavaScript, my favorite flavor!
 
-### Testing
+## Author
+
+> [Ian Marshall](https://ianjstutor.github.io/ian-marshall/)
+
+## Live Site
+
+> [https://ianjstutor.github.io/better-random/](https://ianjstutor.github.io/better-random/)
+
+## Testing
 
 ```bash
 npm test
@@ -38,11 +40,11 @@ The following was inserted into <code>package.json</code> for testing to work.
 }
 ```
 
-### Usage
+## Usage
 
 Include <code>better-random.js</code> in your project. Import the JS into your main JavaScript file and call <code>betterRandom(seed)</code>, where <code>seed</code> is an optional seed number. The return value is an object with three possible functions: <code>range(min, max)</code>, <code>nextInt()</code>, and <code>nextFloat()</code>.
 
-#### HTML
+### HTML
 
 ```html
 <head>
@@ -50,7 +52,7 @@ Include <code>better-random.js</code> in your project. Import the JS into your m
 </head>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 //main.js
@@ -62,17 +64,17 @@ const rangedRand = rand.range(100);
 const chooseAWholeNumberBetweenZeroAnd100 = rangedRand.nextInt();
 ```
 
-### Documentation
+## Documentation
 
-#### Module Export
+### Module Export
 
 ```js
 export { betterRandom };
 ```
 
-#### Public Methods
+### Public Methods
 
-##### betterRandom
+#### betterRandom
 
 ```js
 betterRandom(seed)
@@ -84,7 +86,7 @@ Calling <code>betterRandom</code> initializes a new pseudo random number generat
 
 <code>betterRandom</code> is not a constructor as in an object-oriented paradigm. Instead it is a function that keeps values in closure and returns an object literal with methods that can act within that closure.
 
-##### range
+#### range
 
 ```js
 betterRandom().range(min, max)
@@ -96,7 +98,7 @@ After defining a range, <code>nextInt</code> and <code>nextFloat</code> will pro
 
 <code>range</code> returns an object containing the two functions below.
 
-##### nextInt
+#### nextInt
 
 ```js
 betterRandom().nextInt()
@@ -107,7 +109,7 @@ The <code>nextInt</code> function returns a random integer. Calling it without s
 
 Each call to <code>nextInt</code> changes the seed according to the algorithm. So calling it multiple times will produce a deterministic sequence of integers. Use the same seed, and you'll get the exact same sequence.
 
-##### nextFloat
+#### nextFloat
 
 ```js
 betterRandom().nextFloat()
