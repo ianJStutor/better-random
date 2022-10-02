@@ -6,7 +6,7 @@
 
 JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. So, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
 
-This is a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
+This uses a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
 
 It's NOT suitable for cryptography, but stable in production, and is a lot faster than more modern, more sophisticated algorithms (like Mersenne Twister or ARC4, for example).
 
