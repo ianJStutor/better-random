@@ -8,7 +8,7 @@ JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseu
 
 This uses a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
 
-It's NOT suitable for cryptography, but stable in production, and is a lot faster than more modern, more sophisticated algorithms (like Mersenne Twister or ARC4, for example).
+It's NOT suitable for cryptography, but it is stable in production and a lot faster than more modern, more sophisticated algorithms (like Mersenne Twister or ARC4, for example).
 
 Built with vanilla JavaScript, my favorite flavor!
 
