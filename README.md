@@ -92,7 +92,7 @@ Calling <code>betterRandom</code> initializes a new pseudo random number generat
 betterRandom().range(min, max)
 ```
 
-The <code>range</code> function defines low and high clamping boundaries for the random number. If only one argument is given, the second one will default to zero. <code>min</code> does not need to be less than <code>max</code>.
+The <code>range</code> function defines low and high clamping boundaries for the random number. If only one argument is given, the second one will default to zero. If <code>min</code> is less than <code>max</code> then the range is preserved but reversed; in other words, the lesser argument is always the minimum and the greater is always the maximum.
 
 After defining a range, <code>nextInt</code> and <code>nextFloat</code> will produce numbers within that range, never going below <code>min</code> and never going above <code>max</code>, although matching values are possible when later calling <code>nextInt()</code>. Calling <code>range</code> without arguments will reset the range to defaults (between zero and one, inclusive).
 
