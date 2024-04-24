@@ -4,7 +4,7 @@
 
 ## Description
 
-JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator. But it isn't seeded. So, when you need a fast, seeded pseudo random number generator, you'll have to write your own…or use mine!
+JavaScript's <code>Math.random()</code> is perfectly serviceable as a basic pseudo random number generator (PRNG). But it isn't seeded. So, when you need a fast, seeded PRNG, you'll have to write your own…or use mine!
 
 This uses a linear congruential generator algorithm from the book <cite>Numerical Recipes: The Art of Scientific Computing</cite>, 1986, by William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery.
 
